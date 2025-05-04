@@ -1,17 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --font-family-primary: 'Inter', sans-serif;
-  --font-family-hero: 'Libre Baskerville', serif;
+  --font-family-primary: 'Space Grotesk', sans-serif;
+  --font-family-hero: 'Space Grotesk', sans-serif;
   --primary-color: #f6f4db;
-}
-
-@font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Libre Baskerville';
-  src: url('/fonts/LibreBaskerville.ttf') format('truetype');
 }
 
 * {
@@ -23,8 +15,10 @@
 body {
   min-height: 100vh;
   font-family: var(--font-family-primary);
+  font-weight: 600;
   color: var(--primary-color);
-  background: #000; /* Prevents white flash */
+  background: #000;
+  /* Prevents white flash */
   overflow: hidden;
 }
 
@@ -46,12 +40,11 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.4)
-  );
-  z-index: 0; /* Ensures it's behind the content */
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.4));
+  z-index: 0;
+  /* Ensures it's behind the content */
 }
 
 /* Ensure content stays above the overlay */
@@ -100,6 +93,7 @@ body {
 .date-container h1 {
   font-size: clamp(4rem, 10vw, 8rem);
   font-family: var(--font-family-hero);
+  font-weight: 800;
 }
 
 /* Progress Bar */
