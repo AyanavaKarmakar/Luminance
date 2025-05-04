@@ -37,8 +37,8 @@ const Weather: React.FC = () => {
 
   return (
     <div className="weather visible">
-      <p style={{ fontSize: "1rem" }}>
-        {city} → {tempC.toFixed(1)}°C / {((tempC * 9) / 5 + 32).toFixed(1)}°F
+      <p style={{ fontSize: "1.1rem" }} className="glass-card">
+        {city}: {tempC.toFixed(1)}°C / {((tempC * 9) / 5 + 32).toFixed(1)}°F
       </p>
     </div>
   );

@@ -19,13 +19,22 @@ const App: React.FC = () => {
 
   return (
     <div className="app" style={{ backgroundImage: `url(${imageUrl})` }}>
-      <div className="glass-card weather-card">
+      <div className="weather-card">
         <Weather />
       </div>
 
       <div className="glass-card hero-card">
         <div className="hero">
           <div className="date-container">
+            <h1>
+              {time.toLocaleTimeString("en-GB", {
+                hour: "2-digit",
+                minute: "2-digit",
+              })}
+            </h1>
+
+            <ProgressBar progress={dayProgress} />
+
             <p>
               {time.toLocaleDateString("en-US", {
                 weekday: "long",
@@ -33,25 +42,18 @@ const App: React.FC = () => {
                 day: "numeric",
               })}
             </p>
-            <h1>
-              {time.toLocaleTimeString("en-GB", {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
-            </h1>
           </div>
-
-          <ProgressBar progress={dayProgress} />
         </div>
       </div>
 
-      <footer className="footer">
+      <footer className="footer" style={{ padding: "1rem" }}>
         <p>
           <a
             title="background"
             href={photoLink}
             target="_blank"
             rel="noopener noreferrer"
+            className="glass-card"
           >
             /background
           </a>
@@ -62,6 +64,7 @@ const App: React.FC = () => {
             href="https://github.com/AyanavaKarmakar/luminance"
             target="_blank"
             rel="noopener noreferrer"
+            className="glass-card"
           >
             /github
           </a>
