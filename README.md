@@ -1,6 +1,6 @@
 <h1 align="center">Luminance</h1>
 
-![Vista Screenshot](./screenshots/hero.png)
+![Luminance Screenshot](./screenshots/hero.png)
 
 ## Credits
 

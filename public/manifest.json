@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Vista",
+  "name": "Luminance",
   "description": "A minimal and aesthetic new tab extension with nature backgrounds.",
   "version": "1.0.0",
   "icons": {
@@ -15,7 +15,7 @@
   "host_permissions": ["https://ipwho.is/", "https://api.open-meteo.com/v1/*"],
   "browser_specific_settings": {
     "gecko": {
-      "id": "vista@shashikanth.dev"
+      "id": "luminance@rbbtz.in"
     }
   }
 }
