@@ -1,6 +1,6 @@
-import { IPData, WeatherData } from '@/types/types';
-import { fetchWithCache } from '@/utils/fetch';
-import { useEffect, useState } from 'react';
+import { IPData, WeatherData } from "@/types/types";
+import { fetchWithCache } from "@/utils/fetch";
+import { useEffect, useState } from "react";
 
 const Weather: React.FC = () => {
   const [ipData, setIpData] = useState<IPData | null>(null);
@@ -10,7 +10,7 @@ const Weather: React.FC = () => {
     const fetchData = async () => {
       try {
         // Fetching IP data to get location info (latitude, longitude)
-        const ipResult = await fetchWithCache<IPData>('https://ipwho.is/');
+        const ipResult = await fetchWithCache<IPData>("https://ipwho.is/");
         setIpData(ipResult);
 
         // If latitude and longitude are available, fetch weather data
@@ -37,7 +37,7 @@ const Weather: React.FC = () => {
 
   return (
     <div className="weather visible">
-      <p>
+      <p style={{ fontSize: "1rem" }}>
         {city} → {tempC.toFixed(1)}°C / {((tempC * 9) / 5 + 32).toFixed(1)}°F
       </p>
     </div>
